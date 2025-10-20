@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id="burger-menu">
+            <a href="#">
+                <img src="https://www.gatesnotes.com/Hamburger.svg" alt="Burger Menu">
+            </a>
+        </div>
+        <h1 id="main-title" class="nav-grid-item">David Vigil</h1>
+        <div id="theme-toggle">
+            <a href="#" onclick="switchTheme()">
+                <img src="https://www.svgrepo.com/show/310719/dark-theme.svg" alt="Theme toggle">
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div id="page-title">
+            <h2>My 3D projects</h2>
+        </div>
+    </header>
+    <section id="welcome-section">
+        <h3>Welcome to my 3D portfolio.</h3>
+        <p>Here you will find the results of my incredible journey in Blender, as well as my short film made in Unity. If you like what you see, feel free to reach out! I would love to help you bring your ideas to life.</p>
+    </section>
+    <section id="render-section">
+        <div class="section-intro">
+            <h3>Image Gallery</h3>
+            <p>Click on an image to see it in full size.</p>
+        </div>
+        <div id="preview"></div>
+        <div class="separator"></div>
+        <div class="render-container">
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1wri8liwpNwlHYRwRNzjbqWIl8bvgIDyS&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1wri8liwpNwlHYRwRNzjbqWIl8bvgIDyS&sz=s800" alt="League of Legends Rings"/></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1x-gizomG8srYri9j8N_qINacuXfrxv-w&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1x-gizomG8srYri9j8N_qINacuXfrxv-w&sz=s800" alt="Dona de chocolate con chispas vista de cerca"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xS4SG34QsruLPPyJNkRQdx78OUS98zqb&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xS4SG34QsruLPPyJNkRQdx78OUS98zqb&sz=s800" alt="Dona de chocolate con chispas vista de lejos"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1x5r8cN8WLQ6Ugqs0-qwwDubhFcv8N388&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1x5r8cN8WLQ6Ugqs0-qwwDubhFcv8N388&sz=s800" alt="Pared con labios y graffiti"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xADKQRPmp0fYL1pMKsRrgpzptkiCRP2p&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xADKQRPmp0fYL1pMKsRrgpzptkiCRP2p&sz=s800" alt="Lentes de Lolita"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xCeOStdiaP8CzfsSbotQ1RxO1OCn3Sew&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xCeOStdiaP8CzfsSbotQ1RxO1OCn3Sew&sz=s800" alt="Vaso de Icee azul derramado visto de lejos"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xF1-x7NFbCSqA2kyLwrKSqJJ-UQg439u&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xF1-x7NFbCSqA2kyLwrKSqJJ-UQg439u&sz=s800" alt="Catarina sobre hoja verde en fondo rojo"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xkiYCJStTd6NShUH_cJRjWNIcc38Z0wm&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xkiYCJStTd6NShUH_cJRjWNIcc38Z0wm&sz=s800" alt="Catarina sobre hoja verde en fondo aqua"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xpu_7oSTShKCcWXR2Ce-fV-pFvVaK8UK&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xpu_7oSTShKCcWXR2Ce-fV-pFvVaK8UK&sz=s800" alt="Catarina sobre hoja verde en fondo verde"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xVqhGu-_-x49ffc5s46ujdUu2l0pqwRQ&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xVqhGu-_-x49ffc5s46ujdUu2l0pqwRQ&sz=s800" alt="Vaso de Icee azul derramado visto de cerca"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xSZSQ_AashtuKFjrMp71hsa0ziDMpvN1&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xSZSQ_AashtuKFjrMp71hsa0ziDMpvN1&sz=s800" alt="Pokebola"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xrEdDunZ9ruvRFPalMGeABEuRtSIiM_x&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xrEdDunZ9ruvRFPalMGeABEuRtSIiM_x&sz=s800" alt="Cabeza de león de chocolate"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xspp9zzlqNBjuZQesOHEafX8oV7ivj2E&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xspp9zzlqNBjuZQesOHEafX8oV7ivj2E&sz=s800" alt="Un par de paletas en forma de corazón"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1y7t3BwDR9D7EBkkLL3vErKfPnh71Nfvf&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1y7t3BwDR9D7EBkkLL3vErKfPnh71Nfvf&sz=s800" alt="Anillo de Flash visto de cerca con iluminación"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xxRoJi8qPXW0HxECQryuhtzxg038Pp39&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xxRoJi8qPXW0HxECQryuhtzxg038Pp39&sz=s800" alt="Anillo de Flash visto de cerca"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1xxY1udzfb8KkmQBqwmg-gCn3khKaCp1f&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1xxY1udzfb8KkmQBqwmg-gCn3khKaCp1f&sz=s800" alt="Anillo de Flash visto de lejos"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1y--Fay5Q8d-bPJltDinF6kyH86SjRurH&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1y--Fay5Q8d-bPJltDinF6kyH86SjRurH&sz=s800" alt="Taza de café sobre plato de cristal"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1y1Ck43UQ0gq9IzhKJfqoW8e6oK1c1-N4&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1y1Ck43UQ0gq9IzhKJfqoW8e6oK1c1-N4&sz=s800" alt="Cabeza de conejo empalada"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1yIJI5mNjfkhxXAZVr3WUfcy5M7Ko5Y66&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1yIJI5mNjfkhxXAZVr3WUfcy5M7Ko5Y66&sz=s800" alt="Urinal de oro con una corona encima"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1yJDwz2B9kYcxxNd-xcx8aWUFRyPxnoHp&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1yJDwz2B9kYcxxNd-xcx8aWUFRyPxnoHp&sz=s800" alt="Botella de rompope"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1yyLSbUH4R7nJh3yBqlN4n_yZO60OdtxP&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1yyLSbUH4R7nJh3yBqlN4n_yZO60OdtxP&sz=s800" alt="Borrachitos de cerca"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1yskOjueN50nowj4qEre87_pxLjCybye3&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1yskOjueN50nowj4qEre87_pxLjCybye3&sz=s800" alt="Borrachitos de lejos"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1typ6vm80lQNuqQq3ZSTO9GZC3QSresLV&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1typ6vm80lQNuqQq3ZSTO9GZC3QSresLV&sz=s800" alt="Cangrejo"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1ghLxoCgtbVZh6UwqSVGrkSOTlBJuSNzR&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1ghLxoCgtbVZh6UwqSVGrkSOTlBJuSNzR&sz=s800" alt="Brazos mecánicos"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1HpFT_da6h_VCWxmYXr0SYAPGNynRrr4C&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1HpFT_da6h_VCWxmYXr0SYAPGNynRrr4C&sz=s800" alt="Dexter de frente"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1_7YnZPUWCJ9OXN_VBQDM-Qf7cw4PRWAy&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1_7YnZPUWCJ9OXN_VBQDM-Qf7cw4PRWAy&sz=s800" alt="Dexter de lado"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1JBsh2Rrq3xReoW-pHl8IJ0tqptM2GYwU&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1JBsh2Rrq3xReoW-pHl8IJ0tqptM2GYwU&sz=s800" alt="Torre mágica"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=17glUjvzCaZWFU-qj9qxvvlPHEA8TXtnW&sz=s1200"><img src="https://drive.google.com/thumbnail?id=17glUjvzCaZWFU-qj9qxvvlPHEA8TXtnW&sz=s800" alt="Ángel de la independecia con estilo de Dexter"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1AEAH3mo5LBLGFQ3SvrVb0qqdC26ypK2W&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1AEAH3mo5LBLGFQ3SvrVb0qqdC26ypK2W&sz=s800" alt="Estela de luz con estilo de Dexter"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1Vecb6iBK3T8QbgGglHO6aoi12w-4HXXn&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1Vecb6iBK3T8QbgGglHO6aoi12w-4HXXn&sz=s800" alt="Cupido de los Padrinos Mágicos"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1uJqmoJ-Rcp83-5TegQJwQuU1ccvA6Ksj&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1uJqmoJ-Rcp83-5TegQJwQuU1ccvA6Ksj&sz=s800" alt="Torre BBVA con estilo de los Padrinos Mágicos"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1VhbbKHhszXIM8g3KY3C2trGGKcFs-KZo&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1VhbbKHhszXIM8g3KY3C2trGGKcFs-KZo&sz=s800" alt="3 torres BBVA con estilo de los Padrinos Mágicos en distintos colores"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1SPqhCq3Nw_PBtzRI0luP1bhNa-ZhQR_q&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1SPqhCq3Nw_PBtzRI0luP1bhNa-ZhQR_q&sz=s800" alt="Academia de lucha de Hairy Knuckles"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1VWJQW7i2In33WQaKVEp1ug4osJYZ-j6J&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1VWJQW7i2In33WQaKVEp1ug4osJYZ-j6J&sz=s800" alt="Taxi de los Padrinos Mágicos"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1M9wT40FbLA1ED2OSxOEELRZSaIuXAE9s&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1M9wT40FbLA1ED2OSxOEELRZSaIuXAE9s&sz=s800" alt="Dojo de un Dojo Japonés"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=15j6MvED2WZDpqwVuLHkTfPhFiYyJGey-&sz=s1200"><img src="https://drive.google.com/thumbnail?id=15j6MvED2WZDpqwVuLHkTfPhFiYyJGey-&sz=s800" alt="Habitación de un hotel iluminada"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1q4OyQNIeLnvz_zzWLkNGeu-EOfBa9kGJ&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1q4OyQNIeLnvz_zzWLkNGeu-EOfBa9kGJ&sz=s800" alt="Habitación de un hotel oscura"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1AvVGRJh6Xgg4FlvYBmAUr_fPK3pxJgsM&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1AvVGRJh6Xgg4FlvYBmAUr_fPK3pxJgsM&sz=s800" alt="Habitacion de un hotel iluminada con enfoque en la cama"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1_QQZ1TrBNdRzrpJ_9awRsddpWP_LEhVf&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1_QQZ1TrBNdRzrpJ_9awRsddpWP_LEhVf&sz=s800" alt="Habitacion de un hotel oscura con enfoque en la cama"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1uj0gR4NwDc3JarpdG7LecaAXkPQFWd8v&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1uj0gR4NwDc3JarpdG7LecaAXkPQFWd8v&sz=s800" alt="Gastón en estilo Funko Pop visto de lado derecho"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1qBKx5Etp7_vavN1Lx2F-SjlXc-QzdbuL&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1qBKx5Etp7_vavN1Lx2F-SjlXc-QzdbuL&sz=s800" alt="Gastón en estilo Funko Pop visto de lado izquierdo"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1vJssl9PMDg_HNQPM3PG7WoeTzNaOInaa&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1vJssl9PMDg_HNQPM3PG7WoeTzNaOInaa&sz=s800" alt="Flores de hielo y fuego de Mario Bros."></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1QWx1TECKmg8sZA8tdfgSySFRH4H_ktWs&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1QWx1TECKmg8sZA8tdfgSySFRH4H_ktWs&sz=s800" alt="Bella de Bella y Bestia vista de lado izquierdo"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1lvGFwW7IXJ7h3Bz3U-eER4atf9kzTfpp&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1lvGFwW7IXJ7h3Bz3U-eER4atf9kzTfpp&sz=s800" alt="Bella de Bella y Bestia vista de lado derecho"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1s9q8Gy1gpwnNQpVOU9hTO6UD4pdAX94b&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1s9q8Gy1gpwnNQpVOU9hTO6UD4pdAX94b&sz=s800" alt="Casa de Fallout vista de lado izquierdo"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=16uaKhNAd1X4-621I4jpD5T7244tW29Y0&sz=s1200"><img src="https://drive.google.com/thumbnail?id=16uaKhNAd1X4-621I4jpD5T7244tW29Y0&sz=s800" alt="Casa de Fallout vista de lado derecho"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1WTirIVKgOGbicLQkQGhvNdkkwA02fX1n&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1WTirIVKgOGbicLQkQGhvNdkkwA02fX1n&sz=s800" alt="Gastón de Bella y Bestia visto de lado derecho"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=13jXzha3V3Ghm4PBun_cHWMOdzGI22-vi&sz=s1200"><img src="https://drive.google.com/thumbnail?id=13jXzha3V3Ghm4PBun_cHWMOdzGI22-vi&sz=s800" alt="Casa de Fallout sin techo vista de lado derecho"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1lHDC8ZtF1Z5PoHGdcIrd7Ec0c9ZlnPsN&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1lHDC8ZtF1Z5PoHGdcIrd7Ec0c9ZlnPsN&sz=s800" alt="Castillo de Princesa Peach visto de frente"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1W5zpvrK0Y4aOSJw8yu_5Ft06tW-uTz7B&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1W5zpvrK0Y4aOSJw8yu_5Ft06tW-uTz7B&sz=s800" alt="Castillo de Bowser visto de lado izquierdo"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=175MFbdHsIrwQbbtlHTtfIS5Gth2lZKHL&sz=s1200"><img src="https://drive.google.com/thumbnail?id=175MFbdHsIrwQbbtlHTtfIS5Gth2lZKHL&sz=s800" alt="Castillo de Bowser visto de lado derecho"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1mv8qw_f-k5SuqUJBCQjmDdkCparv9hyZ&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1mv8qw_f-k5SuqUJBCQjmDdkCparv9hyZ&sz=s800" alt="Castillo de Bowser visto de frente"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1mEWBemjpgvHDuYiDowg7aomqtagPA3KX&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1mEWBemjpgvHDuYiDowg7aomqtagPA3KX&sz=s800" alt="Libro de reglas de los Padrinos Mágicos"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1Cw3HtaYQ2eiXAk_0JO8e84EjfAFsw9YY&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1Cw3HtaYQ2eiXAk_0JO8e84EjfAFsw9YY&sz=s800" alt="Tentáculo de pulpo"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1nl5MDZtyo7AEGW8ae-jhuQAWo6FIjTQJ&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1nl5MDZtyo7AEGW8ae-jhuQAWo6FIjTQJ&sz=s800" alt="Fortaleza de Mario Party"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=1rPcDaBOhD-OnD-YAxf0kUtujdrPhf2Pd&sz=s1200"><img src="https://drive.google.com/thumbnail?id=1rPcDaBOhD-OnD-YAxf0kUtujdrPhf2Pd&sz=s800" alt="Goomba de Mario Bros visto de frente"></a>
+            <a class="render" onmouseover="showPreview(this)" onmouseout="resetPreview()" target="_blank" href="https://drive.google.com/thumbnail?id=142BEkEHs3w0fctebu8hMizypZFI0kOj0&sz=s1200"><img src="https://drive.google.com/thumbnail?id=142BEkEHs3w0fctebu8hMizypZFI0kOj0&sz=s800" alt="Muebles futuristas de una casa lunar"></a>
+        </div>
+    </section>
+    <section id="video-section">
+        <div class="section-intro">
+            <h3>Check out my animated short film!</h3>
+            <p>I made this shortfilm for a school project using Unity to achieve real-time animation. I created a whole universe, so be sure to read the story if you are craving some lore :D</p>
+        </div>
+        <div class="separator"></div>
+        <iframe id="short-film" src="https://www.youtube.com/embed/UvBAANDWWWc?si=wKzPWV_0MHDlTzbC" frameborder="10" allowfullscreen></iframe>
+        <div id="video-story">
+            <h4>Short Film Storyline</h4>
+            <p>This short film tells the story of a robot who wakes up in a post-apocalyptic world and tries to find other survivors. Along the way, he encounters various challenges and learns about the importance of hope and companionship.</p>
+            <p>This short film tells the story of a robot who wakes up in a post-apocalyptic world and tries to find other survivors. Along the way, he encounters various challenges and learns about the importance of hope and companionship.</p>
+            <p>This short film tells the story of a robot who wakes up in a post-apocalyptic world and tries to find other survivors. Along the way, he encounters various challenges and learns about the importance of hope and companionship.</p>
+            <p>This short film tells the story of a robot who wakes up in a post-apocalyptic world and tries to find other survivors. Along the way, he encounters various challenges and learns about the importance of hope and companionship.</p>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 David Vigil. All rights reserved.</p>
+        <a href="https://www.flaticon.com/free-icons/art" title="art icons" target="_blank">Art icons created by Kiranshastry - Flaticon</a>
+    </footer>
+</body>
+<script src="js/functions.js"></script>
+</html>
