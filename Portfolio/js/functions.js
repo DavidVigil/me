@@ -26,7 +26,7 @@ function resetPreview(){
             preview.style.filter = "invert(1)";
         }
     }
-    preview.style.backgroundImage = `url('../images/gallery.png')`;
+    preview.style.backgroundImage = `url('./images/gallery.png')`;
 }
 function toggleMenu(){
     const nav = document.getElementById('nav-links');
