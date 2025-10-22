@@ -35,6 +35,18 @@ function toggleMenu(){
         nav.style.display = "grid";
     }
 }
+function showMore(button){
+    const moreContent = button.nextElementSibling;
+    moreContent.style.display = "block";
+    button.style.transform = "rotate(180deg)";
+    button.onclick = function(){
+        moreContent.style.display = "none";
+        button.style.transform = "rotate(0deg)";
+        button.onclick = function(){
+            showMore(button);
+        }
+    }
+}
 document.addEventListener("DOMContentLoaded", function(){
     var page = window.location.pathname.split("/").pop();
     page = page.replace('.html', '');

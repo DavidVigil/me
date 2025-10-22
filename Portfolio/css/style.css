@@ -1,11 +1,11 @@
 :root{
-    --bg-color: #F3F3F3;
+    --bg-color: #f3f3f3;
     --nav-bg-color: rgba(255, 255, 255, 0.9);
     --nav-color: #000000;
     --icon-filter: 0;
     --header-bg-img: url('');
     --header-bg: linear-gradient(to bottom, rgba(0, 0, 0, 0), #f3f3f3), var(--header-bg-img);
-    --welcome-bg: linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(0, 0, 0, 0.5) 30% 70%,rgba(255, 255, 255, 0.5)), url('../images/english-welcome.png');
+    --welcome-bg: linear-gradient(0deg,rgba(243, 243, 243, 1),rgba(0, 0, 0, 0.5) 30% 70%,rgba(243, 243, 243, 1)), url('../images/english-welcome.png');
     --page-title-color: black;
     --section-bg-color: white;
     --section-color: black;
@@ -45,7 +45,7 @@ html[data-theme='light']{
     --nav-color: #000000;
     --icon-filter: 0;
     --header-bg: linear-gradient(to bottom, rgba(0, 0, 0, 0), #f3f3f3), var(--header-bg-img);
-    --welcome-bg: linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(0, 0, 0, 0.5) 30% 70%,rgba(255, 255, 255, 0.5)), url('../images/english-welcome.png');
+    --welcome-bg: linear-gradient(0deg,rgba(243, 243, 243, 1),rgba(0, 0, 0, 0.5) 30% 70%,rgba(243, 243, 243, 1)), url('../images/english-welcome.png');
     --page-title-color: black;
     --section-bg-color: white;
     --section-color: black;
@@ -189,11 +189,15 @@ section:hover{
     transform: scale(1.02);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+section h3{
+    text-align: center;
+}
 .welcome-section{
     text-align: center;
 }
 #english-welcome{
     text-shadow: black 3px 3px 5px;
+    box-shadow: none;
     padding: 15vw 10vw;
     margin: 0 0 5vw 0;
     align-content: center;
@@ -204,13 +208,88 @@ section:hover{
     background-position: center;
     box-sizing: border-box;
 }
-#english-welcome:hover, #about-section:hover, #contact-section:hover{
+#english-welcome:hover, #values-welcome:hover, #about-section:hover, #contact-section:hover{
     box-shadow: none;
     transform: none;
 }
 #english-welcome h3, #english-welcome p{
     color: white;
     animation: slideUp 0.6s ease-out;
+}
+#values-welcome{
+    box-shadow: none;
+    padding: 15vw 10vw;
+    margin: 0 0 5vw 0;
+    align-content: center;
+    width: 100%;
+    border-radius: 0px;
+    background: none;
+    box-sizing: border-box;
+}
+#values-welcome h3, #values-welcome p{
+    color: var(--section-color);
+    animation: slideUp 0.6s ease-out;
+}
+#value-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    width: 80vw;
+    margin: 0 auto;
+}
+.value-card{
+    max-width: none;
+}
+.value-card figure{
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #8c8c8c4d;
+}
+.value-card figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.value-card blockquote{
+    text-align: right;
+}
+.value-card button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 2vw auto 0;
+}
+.value-card button img{
+    width: 10vw;
+    filter: invert(var(--icon-filter));
+}
+.card-description{
+    display: none;
+    margin-top: 2vw;
+}
+#stories article{
+    display: flex;
+    flex-wrap: wrap;
+}
+#stories h4{
+    flex: 90%;
+}
+#stories button{
+    flex: 10%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+}
+#stories button img{
+    width: 5vw;
+    filter: invert(var(--icon-filter));
+}
+#stories p{
+    display: none;
+    margin-top: 2vw;
 }
 #about-section{
     display: grid;
@@ -421,6 +500,34 @@ footer a{
         padding: 0 15vw;
         height: 350px;
     }
+    #values-welcome{
+        max-width: none;
+        padding: 0 15vw;
+        height: 350px;
+    }
+    #value-cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 2vw;
+        width: 80vw;
+        justify-items: center;
+    }
+    .value-card{
+        margin: 0;
+        padding: 2vw;
+        grid-column: auto;
+        grid-row: auto;
+        align-self: start; /* Add this to maintain independent height */
+    }
+    .value-card button img{
+        width: 3vw;
+    }
+    #stories{
+        margin-top: 5vw;
+        max-width: 600px;
+    }
+    #stories button img{
+        width: 25px;
+    }
     #about-section{
         max-width: 700px;
         grid-template-columns: 1fr 1fr;
@@ -565,5 +672,10 @@ footer a{
         box-shadow: var(--section-shadow);
         transform: scale(1.02);
         transition: transform 0.3s, box-shadow 0.3s;
+    }
+}
+@media all and (min-width: 1400px){
+    #value-cards{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
