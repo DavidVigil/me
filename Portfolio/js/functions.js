@@ -2,11 +2,10 @@ function switchTheme(){
     const current = document.documentElement.getAttribute('data-theme');
     const newTheme = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', newTheme);
-    const preview = document.getElementById('preview');
-    if (newTheme === 'dark') {
-        preview.style.filter = "invert(1)";
-    } else {
-        preview.style.filter = "invert(0)";
+    const currentPage = window.location.pathname.split("/").pop();
+    if (currentPage === '3d.html') {
+        const preview = document.getElementById('preview');
+        preview.style.filter = newTheme === 'dark' ? "invert(1)" : "invert(0)";
     }
 }
 function showPreview(previewPic){
@@ -40,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function(){
     var page = window.location.pathname.split("/").pop();
     page = page.replace('.html', '');
     document.documentElement.style.setProperty('--header-bg-img', `url("../images/${page}-banner.png")`);
+    // Initialize theme based on system preference or default to light
+    if (!document.documentElement.hasAttribute('data-theme')) {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    }
 });
-// Initialize theme based on system preference or default to light
-if (!document.documentElement.hasAttribute('data-theme')) {
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-}
