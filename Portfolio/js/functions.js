@@ -26,7 +26,7 @@ function resetPreview(){
             preview.style.filter = "invert(1)";
         }
     }
-    preview.style.backgroundImage = `url('./images/gallery.png')`;
+    preview.style.backgroundImage = `url('./images/gallery.png')`; //Used . instead of .. so github won't have trouble finding it.
 }
 function toggleMenu(){
     const nav = document.getElementById('nav-links');
@@ -40,4 +40,10 @@ document.addEventListener("DOMContentLoaded", function(){
     var page = window.location.pathname.split("/").pop();
     page = page.replace('.html', '');
     document.documentElement.style.setProperty('--header-bg-img', `url("../images/${page}-banner.png")`);
+    
+    // Initialize theme based on system preference or default to light
+    if (!document.documentElement.hasAttribute('data-theme')) {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    }
 });

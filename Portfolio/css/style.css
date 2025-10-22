@@ -94,7 +94,7 @@ nav{
 .nav-link{
     display: flex;
     text-decoration: none;
-    font-size: 3vw;
+    font-size: 10vw;
     color: var(--nav-color);
     align-items: center;
     width: 100%;
@@ -291,6 +291,32 @@ section:hover{
 #when-section p{
     text-align: left;
 }
+#schedule-button2{
+    display: none;
+    margin: 8vw auto 0;
+}
+#schedule-button{
+    margin: 8vw auto 0;
+    width: 60%;
+    background-color: #039BE5;
+    border-radius: 10px;
+    color: var(--section-color);
+    overflow: hidden;
+}
+#schedule-button a{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 5vw;
+}
 #where-section{
     text-align: center;
 }
@@ -359,16 +385,20 @@ footer{
     color: white;
     margin: 2vh 0 0 0;
 }
+footer a{
+    color: white;
+    text-decoration: none;
+}
 @media all and (min-width: 772px){
     #nav-links{
         width: 40vw;
         top: 4vw;
     }
     #nav-links li{
-        max-height: 50px;
+        max-height: 100px;
     }
     .nav-link{
-        font-size: 23px;
+        font-size: 35px;
         padding: 15px;
     }
     #burger-menu img{
@@ -462,18 +492,21 @@ footer{
         grid-row: 2;
     }
     #schedule-button{
-        margin-top: 8vw;
+        display: none;
+    }
+    #schedule-button2{
+        display: block;
+    }
+    #when-section img, #where-section img{
+        max-width: none;
+        width: 50%;
+        margin: auto 0;
     }
     #where-section{
         max-width: none;
         width: 24vw;
         grid-column: 2;
         grid-row: 2;
-    }
-    #when-section img, #where-section img{
-        max-width: none;
-        width: 50%;
-        margin: auto 0;
     }
     #render-section{
         display: grid;
