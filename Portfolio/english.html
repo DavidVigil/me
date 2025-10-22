@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id="burger-menu">
+            <button id="burger-button" onclick="toggleMenu()" >
+                <img src="images/hamburger.png" alt="Burger Menu">
+            </button>
+        </div>
+        <ul id="nav-links">
+            <li><a class="nav-link" href="3d.html">3D Projects</a></li>
+            <li><a class="nav-link" href="english.html">English Lessons</a></li>
+            <li><a class="nav-link" href="values.html">Core Values</a></li>
+        </ul>
+        <h1 id="main-title" class="nav-grid-item">David Vigil</h1>
+        <div id="theme-toggle">
+            <button id="theme-button" onclick="switchTheme()">
+                <img src="images/theme.png" alt="Theme toggle">
+            </button>
+        </div>
+    </nav>
+    <header id="english-header">
+        <div id="page-title">
+            <h2>English Lessons</h2>
+        </div>
+    </header>
+    <section class="welcome-section" id="english-welcome">
+        <h3>¡Bienvenid@!</h3>
+        <p>Este es tu primer paso para aprender inglés. Aquí encontrarás todo lo que necesitas para comenzar. No dudes en contactarme si tienes preguntas, con mucho gusto te atenderé.</p>
+    </section>
+    <section id="about-section">
+        <figure id="profile-figure">
+            <img src="images/Perfil.jpg" alt="David Vigil">
+            <figcaption>David Vigil - Profesor de inglés</figcaption>
+        </figure>
+        <div class="section-intro">
+            <h3>¿Quién soy?</h3>
+            <p>Hola, soy David Vigil, un apasionado por la enseñanza del inglés. Mi objetivo es ayudarte a alcanzar tus metas lingüísticas de manera efectiva. Tengo más de 8 años de experiencia como profesor y he ayudado a estudiantes de México, Brasil, Venezuela y Estados Unidos a dominar el idioma.</p>
+        </div>
+    </section>
+    <section id="what-section">
+        <div class="section-intro">
+            <h3>Practica - Regularízate - Certifícate</h3>
+            <div class="separator"></div>
+        </div>
+        <div id="what-1">
+            <h4>Aprendizaje Personalizado</h4>
+            <p>Mis clases están diseñadas para adaptarse a tus necesidades individuales. Ya sea que estés comenzando desde cero o buscando mejorar tus habilidades, trabajaré contigo para crear un plan de aprendizaje que funcione para ti.</p>
+            <div class="separator"></div>
+        </div>
+        <div id="what-2">
+            <h4>Materiales Interactivos</h4>
+            <p>Utilizo una variedad de recursos, incluyendo videos, juegos y ejercicios prácticos para reforzar tu aprendizaje.</p>
+            <p>En cada clase pondremos en práctica lo aprendido para mejorar tus habilidades.</p>
+            <div class="separator"></div>
+        </div>
+        <div id="what-3">
+            <h4>Ambiente de Apoyo</h4>
+            <p>Creo en un enfoque positivo y alentador para el aprendizaje, por lo que procuro un entorno "<i lang="en">error-friendly</i>" donde puedas sentirte cómodo cometiendo errores y aprendiendo de ellos. Aquí es donde pierdes la pena y ganas confianza.</p>
+        </div>
+    </section>
+    <div id="cards">
+        <section id="why-section">
+            <div class="section-intro">
+                <h3>¿Por qué aprender inglés?</h3>
+                <div class="separator"></div>
+            </div>
+            <img src="../images/target.png" alt="target icon">
+            <p>Todos tenemos distintas razones para aprender un nuevo idioma. Ya sea por motivos laborales, académicos o personales, el inglés se ha convertido en una herramienta esencial en el mundo actual. Reflexiona sobre tus objetivos y cómo el inglés puede ayudarte a alcanzarlos.</p>
+        </section>
+        <section id="how-to-section">
+            <div class="section-intro">
+                <h3>Empieza ahora</h3>
+                <div class="separator"></div>
+            </div>
+            <img src="../images/checked.png" alt="Checked icon">
+            <p>Comenzar es fácil. Sigue estos simples pasos para iniciar tu viaje de aprendizaje del inglés conmigo:</p>
+            <ol>
+                <li>Agenda tu entrevista</li>
+                <li>Realiza tu examen diagnóstico sin costo</li>
+                <li>Comienza tus clases personalizadas</li>
+            </ol>
+        </section>
+        <section id="when-section">
+            <div class="section-intro">
+                <h3>Tu primer paso</h3>
+                <div class="separator"></div>
+            </div>
+            <img src="https://media.securiti.ai/wp-content/uploads/2023/04/Google-Calendar-Full.png" alt="Google Calendar Logo">
+            <p>Aqui podrás agendar tu entrevista directamente en mi calendario. Reserva 30min para hablar de tus metas y cómo puedo ayudarte a alcanzarlas.</p>
+            <div id="schedule-button">
+                <!-- Google Calendar Appointment Scheduling begin -->
+                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                <script>
+                (function() {
+                var target = document.currentScript;
+                window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ194Aot9TlqDKElVmtlxnbmXAH3oYB5Gy6bS-gJNLtb-PI8PXWk7-M1p98puXk6koFOsxSijB_s?gv=true',
+                    color: '#039BE5',
+                    label: 'Reservar una cita',
+                    target,
+                    });
+                });
+                })();
+                </script>
+                <!-- end Google Calendar Appointment Scheduling -->
+            </div>
+        </section>
+        <section id="where-section">
+            <div class="section-intro">
+                <h3>Clases en línea</h3>
+                <div class="separator"></div>
+            </div>
+            <img src="https://logodownload.org/wp-content/uploads/2021/06/google-meet-logo-0.png" alt="Google Meet Logo">
+            <p>Ofrezco clases en línea a través de Google Meet, lo que te permite aprender desde la comodidad de tu hogar o cualquier lugar que prefieras sin perder tiempo en desplazamientos. Solo necesitas una conexión a internet estable y un dispositivo micrófono.</p>
+        </section>
+    </div>
+    <section id="contact-section">
+        <div class="section-intro">
+            <h3>Contáctame</h3>
+        </div>
+        <p>Si tienes alguna pregunta o deseas más información sobre mis clases de inglés, no dudes en contactarme.</p>
+        <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
+        <p>Teléfono: <a href="tel:+1234567890">+1234567890</a></p>
+    </section>
+    <footer>
+        <p>© 2025 David Vigil. All rights reserved.</p>
+        <a href="https://www.flaticon.com/free-icons/hamburguer-menu" title="hamburguer menu icons">Hamburguer menu icons created by Katerine Melina - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/theme" title="theme icons">Theme icons created by dokodemo - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/goal" title="goal icons">Goal icons created by nawicon - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/checkmark" title="checkmark icons">Checkmark icons created by Freepik - Flaticon</a>
+    </footer>
+    <script src="js/functions.js"></script>
+</body>
+</html>

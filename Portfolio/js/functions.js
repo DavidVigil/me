@@ -28,3 +28,16 @@ function resetPreview(){
     }
     preview.style.backgroundImage = `url('../images/gallery.png')`;
 }
+function toggleMenu(){
+    const nav = document.getElementById('nav-links');
+    if(nav.style.display === "grid"){
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "grid";
+    }
+}
+document.addEventListener("DOMContentLoaded", function(){
+    var page = window.location.pathname.split("/").pop();
+    page = page.replace('.html', '');
+    document.documentElement.style.setProperty('--header-bg-img', `url("../images/${page}-banner.png")`);
+});

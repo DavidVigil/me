@@ -2,10 +2,10 @@
     --bg-color: #F3F3F3;
     --nav-bg-color: rgba(255, 255, 255, 0.9);
     --nav-color: #000000;
-    --burger-filter: 1;
-    --toggle-filter: 0;
-    --preview-filter: 0;
-    --header-bg-img: linear-gradient(to bottom, rgba(0, 0, 0, 0), #f3f3f3), url("https://www.hdwallpapers.in/download/road_path_grass_field_clouds_sky_forest_nature_landscape_wallpaper_background_4k_hd_nature-HD.jpg");
+    --icon-filter: 0;
+    --header-bg-img: url('');
+    --header-bg: linear-gradient(to bottom, rgba(0, 0, 0, 0), #f3f3f3), var(--header-bg-img);
+    --welcome-bg: linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(0, 0, 0, 0.5) 30% 70%,rgba(255, 255, 255, 0.5)), url('../images/english-welcome.png');
     --page-title-color: black;
     --section-bg-color: white;
     --section-color: black;
@@ -17,10 +17,9 @@
         --bg-color: #000000;
         --nav-bg-color: rgba(0, 0, 0, 0.8);
         --nav-color: white;
-        --burger-filter: 0;
-        --toggle-filter: 1;
-        --preview-filter: 1;
-        --header-bg-img: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000), url("https://www.hdwallpapers.in/download/road_path_grass_field_clouds_sky_forest_nature_landscape_wallpaper_background_4k_hd_nature-HD.jpg");
+        --icon-filter: 1;
+        --header-bg: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000), var(--header-bg-img);
+        --welcome-bg: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/english-welcome.png');
         --page-title-color: white;
         --section-bg-color: #1a1a1a;
         --section-color: white;
@@ -32,10 +31,9 @@ html[data-theme='dark'] {
     --bg-color: #000000;
     --nav-bg-color: rgba(0, 0, 0, 0.8);
     --nav-color: white;
-    --burger-filter: 0;
-    --toggle-filter: 1;
-    --preview-filter: 1;
-    --header-bg-img: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000), url("https://www.hdwallpapers.in/download/road_path_grass_field_clouds_sky_forest_nature_landscape_wallpaper_background_4k_hd_nature-HD.jpg");
+    --icon-filter: 1;
+    --header-bg: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000), var(--header-bg-img);
+    --welcome-bg: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/english-welcome.png');
     --page-title-color: white;
     --section-bg-color: #1a1a1a;
     --section-color: white;
@@ -45,10 +43,9 @@ html[data-theme='light']{
     --bg-color: #F3F3F3;
     --nav-bg-color: rgba(255, 255, 255, 0.9);
     --nav-color: #000000;
-    --burger-filter: 1;
-    --toggle-filter: 0;
-    --preview-filter: 0;
-    --header-bg-img: linear-gradient(to bottom, rgba(0, 0, 0, 0), #f3f3f3), url("https://www.hdwallpapers.in/download/road_path_grass_field_clouds_sky_forest_nature_landscape_wallpaper_background_4k_hd_nature-HD.jpg");
+    --icon-filter: 0;
+    --header-bg: linear-gradient(to bottom, rgba(0, 0, 0, 0), #f3f3f3), var(--header-bg-img);
+    --welcome-bg: linear-gradient(0deg,rgba(255, 255, 255, 0.5),rgba(0, 0, 0, 0.5) 30% 70%,rgba(255, 255, 255, 0.5)), url('../images/english-welcome.png');
     --page-title-color: black;
     --section-bg-color: white;
     --section-color: black;
@@ -58,12 +55,14 @@ body{
     background-color: var(--bg-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    padding: 0;
 }
 nav{
     position: fixed;
     top: 1vh;
-    left: 5vw;
-    right: 5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
     background-color: var(--nav-bg-color);
     backdrop-filter: blur(3px);
     border-radius: 5px;
@@ -74,18 +73,55 @@ nav{
     max-height: 5vh;
     z-index: 10;
 }
+#nav-links{
+    position: fixed;
+    top: 5vw;
+    display: none;
+    width: 90vw;
+    background-color: var(--nav-bg-color);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+#nav-links li{
+    color: var(--nav-color);
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.nav-link{
+    display: flex;
+    text-decoration: none;
+    font-size: 3vw;
+    color: var(--nav-color);
+    align-items: center;
+    width: 100%;
+    padding: 2vw;
+    margin: 0;
+}
 
+.nav-link:hover{
+    background-color: #8c8c8c4d;
+}
 #burger-menu{
     grid-column: 1;
     margin-left: 2vw;
-    filter: invert(var(--burger-filter));
+    filter: invert(var(--icon-filter));
 }
-#burger-menu a{
+#burger-button{
     height: 100%;
     padding: 0 1vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#burger-button:hover{
+    background-color: #8c8c8c4d;
 }
 #burger-menu img{
-    max-width: 4vw; 
+    width: 4vw; 
 }
 #main-title{
     grid-column: 2 / span 2;
@@ -97,14 +133,20 @@ nav{
     grid-column: 4;
     justify-self: end;
     margin-right: 2vw;
-    filter: invert(var(--toggle-filter));
+    filter: invert(var(--icon-filter));
 }
-#theme-toggle a{
+#theme-button{
     height: 100%;
     padding: 0 1vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#theme-button:hover{
+    background-color: #8c8c8c4d;
 }
 #theme-toggle img{
-    max-width: 2vw; 
+    width: 4vw; 
 }
 header{
     width: 100%;
@@ -112,8 +154,9 @@ header{
     justify-items: left;
     align-items: end;
     background-color: rgb(102, 18, 18);
-    background-image: var(--header-bg-img);
+    background-image: var(--header-bg);
     background-size: cover;
+    background-position: top;
     min-height: 100px;
     height: 20vh;
 }
@@ -121,6 +164,16 @@ header{
     padding:0 2%;
     font-size: 4vw;
     color: var(--page-title-color);
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 section{
     margin: 1vh auto;
@@ -136,8 +189,70 @@ section:hover{
     transform: scale(1.02);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-#welcome-section{
+.welcome-section{
     text-align: center;
+}
+#english-welcome{
+    text-shadow: black 3px 3px 5px;
+    padding: 15vw 10vw;
+    margin: 0 0 5vw 0;
+    align-content: center;
+    width: 100%;
+    border-radius: 0px;
+    background-image: var(--welcome-bg);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+#english-welcome:hover, #about-section:hover, #contact-section:hover{
+    box-shadow: none;
+    transform: none;
+}
+#english-welcome h3, #english-welcome p{
+    color: white;
+    animation: slideUp 0.6s ease-out;
+}
+#about-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    background: none;
+    box-shadow: none;
+}
+#about-section .section-intro{
+    grid-column: 1;
+    grid-row: 2;
+}
+#profile-figure{
+    grid-column: 1;
+    grid-row: 1;
+    width: 30vw;
+    height: 30vw;
+    margin: 0;
+    border-radius: 50%;
+    border: 3px solid var(--section-color);
+    overflow: hidden;
+}
+#profile-figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#what-section h4, #what-section p{
+    text-align: start;
+}
+#why-section{
+    text-align: center;
+}
+#why-section p{
+    text-align: left;
+}
+#why-section img, #how-to-section img{
+    width: 30vw;
+    max-width: 120px;
+    height: auto;
+    filter: invert(var(--icon-filter));
 }
 .separator{
     margin: 1vh 0;
@@ -150,6 +265,46 @@ section:hover{
     text-align: center;
     justify-content: space-between;
 }
+#how-to-section{
+    text-align: center;
+}
+#how-to-section p, #how-to-section li{
+    text-align: left;
+}
+#how-to-section ol{
+    list-style: decimal;
+    padding-left: 5vw;
+    line-height: 10vw;
+}
+#when-section{
+    padding-bottom: 5vw;
+    text-align: center;
+}
+#when-section img, #where-section img{
+    width: 50vw;
+    height: auto;
+    padding: 0 5vw;
+    border-radius: 15px;
+    border: 2px solid #8c8c8c4d;
+    background-color: var(--bg-color);
+}
+#when-section p{
+    text-align: left;
+}
+#where-section{
+    text-align: center;
+}
+#where-section p{
+    text-align: left;
+}
+#contact-section{
+    background: none;
+    box-shadow: none;
+    text-align: center;
+}
+#contact-section a{
+    color: var(--section-color);
+}
 #preview{
     display: none;
     border: 2px solid black;
@@ -158,7 +313,7 @@ section:hover{
     grid-row: 2;
     height: 82%;
     width: 100%;
-    filter: invert(var(--preview-filter));
+    filter: invert(var(--icon-filter));
     background-image: url('../images/gallery.png');
     background-size: contain;
     background-position: center;
@@ -205,11 +360,120 @@ footer{
     margin: 2vh 0 0 0;
 }
 @media all and (min-width: 772px){
+    #nav-links{
+        width: 40vw;
+        top: 4vw;
+    }
+    #nav-links li{
+        max-height: 50px;
+    }
+    .nav-link{
+        font-size: 23px;
+        padding: 15px;
+    }
+    #burger-menu img{
+        max-width: 30px; 
+    }
+    #theme-toggle img{
+        max-width: 30px; 
+    }
     #main-title{
+        font-size: 30px;
+    }
+    #page-title{
         font-size: 30px;
     }
     section{
         max-width: 60vw;
+    }
+    #english-welcome{
+        max-width: none;
+        padding: 0 15vw;
+        height: 350px;
+    }
+    #about-section{
+        max-width: 700px;
+        grid-template-columns: 1fr 1fr;
+    }
+    #about-section .section-intro{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #profile-figure{
+        grid-column: 2;
+        grid-row: 1;
+        width: 250px;
+        height: 250px;
+    }
+    #what-1 .separator, #what-2 .separator{
+        display: none;
+    }
+    #what-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3vw;
+        row-gap: 0;
+    }
+    #what-section .section-intro{
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+    #what-1{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #what-2{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #what-3{
+        grid-column: 3;
+        grid-row: 2;
+    }
+    #cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2vw;
+        row-gap: 0;
+        max-width: 60vw;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    #why-section{
+        max-width: none;
+        width: 24vw;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #how-to-section{
+        max-width: none;
+        width: 24vw;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #how-to-section ol{
+        padding-left: 3vw;
+        line-height: 25px;
+    }
+    #when-section{
+        max-width: none;
+        width: 24vw;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #schedule-button{
+        margin-top: 8vw;
+    }
+    #where-section{
+        max-width: none;
+        width: 24vw;
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #when-section img, #where-section img{
+        max-width: none;
+        width: 50%;
+        margin: auto 0;
     }
     #render-section{
         display: grid;
