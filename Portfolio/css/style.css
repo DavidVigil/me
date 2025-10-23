@@ -279,10 +279,10 @@ section h3{
     flex-wrap: wrap;
 }
 #stories h4{
-    flex: 90%;
+    flex: 80%;
 }
 #stories button{
-    flex: 10%;
+    flex: 20%;
     background: none;
     border: none;
     cursor: pointer;
